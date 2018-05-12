@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
+import { SinginPage } from '../singin/singin';
 
 /**
  * Generated class for the WalletPage page.
@@ -25,6 +26,10 @@ export class WalletPage {
 
   ionViewCanEnter() {
     return this.auth.authenticated();
+  }
+
+  ionViewCanLeave() {
+    this.navCtrl.setRoot(SinginPage);
   }
 
 }

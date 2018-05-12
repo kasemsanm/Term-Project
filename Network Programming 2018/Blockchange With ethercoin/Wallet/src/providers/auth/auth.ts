@@ -6,8 +6,6 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
-import { NavController } from 'ionic-angular';
-import { SinginPage } from '../../pages/singin/singin';
 
 /*
   Generated class for the AuthProvider provider.
@@ -18,7 +16,7 @@ import { SinginPage } from '../../pages/singin/singin';
 @Injectable()
 export class AuthProvider {
 
-  constructor(public http: HttpClient,private afAuth:AngularFireAuth,private navCtrl:NavController) {
+  constructor(public http: HttpClient,private afAuth:AngularFireAuth) {
   }
 
   Singup(email:string,password:string){
@@ -39,7 +37,6 @@ export class AuthProvider {
       .map(state => !!state)
       .do(authenticated => {
       if (!authenticated) {
-        this.navCtrl.setRoot(SinginPage);
         return false;
       }
       else return true;      
