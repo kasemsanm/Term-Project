@@ -17,6 +17,10 @@ import { SettingPage } from '../pages/setting/setting';
 import { WalletPage } from '../pages/wallet/wallet';
 import { WalletProvider } from '../providers/wallet/wallet';
 import { AuthProvider } from '../providers/auth/auth';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { firebaseConfig } from './firebase.config';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,9 @@ import { AuthProvider } from '../providers/auth/auth';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

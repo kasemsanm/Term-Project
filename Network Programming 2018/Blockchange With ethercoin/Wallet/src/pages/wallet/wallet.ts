@@ -29,7 +29,7 @@ export class WalletPage {
   }
 
   ionViewCanLeave() {
-    this.navCtrl.setRoot(SinginPage);
+    this.navCtrl.setRoot(SinginPage)
   }
 
 }
