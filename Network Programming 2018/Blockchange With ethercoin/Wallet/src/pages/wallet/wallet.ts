@@ -27,9 +27,4 @@ export class WalletPage {
   ionViewCanEnter() {
     return this.auth.authenticated();
   }
-
-  ionViewCanLeave() {
-    this.navCtrl.setRoot(SinginPage)
-  }
-
 }
