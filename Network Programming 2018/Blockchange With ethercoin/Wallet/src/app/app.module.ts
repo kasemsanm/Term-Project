@@ -15,6 +15,7 @@ import { ContractsPage } from '../pages/contracts/contracts';
 import { TradePage } from '../pages/trade/trade';
 import { SettingPage } from '../pages/setting/setting';
 import { WalletPage } from '../pages/wallet/wallet';
+import { WalletProvider } from '../providers/wallet/wallet';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { WalletPage } from '../pages/wallet/wallet';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    WalletProvider
   ]
 })
 export class AppModule {}
