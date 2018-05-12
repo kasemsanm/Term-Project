@@ -14,6 +14,7 @@ import { SingupPage } from '../pages/singup/singup';
 import { ContractsPage } from '../pages/contracts/contracts';
 import { TradePage } from '../pages/trade/trade';
 import { SettingPage } from '../pages/setting/setting';
+import { WalletPage } from '../pages/wallet/wallet';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SettingPage } from '../pages/setting/setting';
     SingupPage,
     ContractsPage,
     TradePage,
-    SettingPage
+    SettingPage,
+    WalletPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { SettingPage } from '../pages/setting/setting';
     SingupPage,
     ContractsPage,
     TradePage,
-    SettingPage
+    SettingPage,
+    WalletPage
   ],
   providers: [
     StatusBar,
